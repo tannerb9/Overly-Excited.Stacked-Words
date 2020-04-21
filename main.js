@@ -20,6 +20,9 @@ function addExcitement() {
   let full_sentence = "";
   for (let word of sentence) {
     full_sentence += word + " ";
+    if (word === "moon") {
+      sentence.push("...");
+    }
     console.log(full_sentence);
   }
 }
