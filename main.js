@@ -1,13 +1,5 @@
-// If the current value of the counter variable can be evenly divided
-// by 3 (using the JavaScript remainder operator) add a single exclamation
-// point (!) to the current word in the array.
-
-// If the current word's place (not index) in the array
-// is evenly divisible by 3, add an exclamation point
-// to the end of the word and then concatenate it to
-// `buildMeUp`.
-
-// Otherwise, just concatenate the word itself.
+// Add a new argument to the function so that a developer can specify which
+// character should be displayed instead of it always being an exclamation point.
 
 let sentence = [
   "The",
@@ -26,11 +18,11 @@ let sentence = [
 
 let word_counter = 1;
 
-function addExcitement(theWordArray) {
+function addExcitement(theWordArray, punctuation) {
   let buildMeUp = "";
   for (let i = 0; i < theWordArray.length; i++) {
     if (word_counter % 3 === 0) {
-      buildMeUp += theWordArray[i] + "! ";
+      buildMeUp += theWordArray[i] + punctuation + " ";
       word_counter++;
     } else {
       buildMeUp += theWordArray[i] + " ";
@@ -40,4 +32,4 @@ function addExcitement(theWordArray) {
   }
 }
 
-addExcitement(sentence);
+addExcitement(sentence, "?");
