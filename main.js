@@ -26,11 +26,11 @@ let sentence = [
 
 let word_counter = 1;
 
-function addExcitement(theWordArray) {
+function addExcitement(theWordArray, punctuation) {
   let buildMeUp = "";
   for (let i = 0; i < theWordArray.length; i++) {
     if (word_counter % 3 === 0) {
-      buildMeUp += theWordArray[i] + "! ";
+      buildMeUp += theWordArray[i] + punctuation + " ";
       word_counter++;
     } else {
       buildMeUp += theWordArray[i] + " ";
@@ -40,4 +40,4 @@ function addExcitement(theWordArray) {
   }
 }
 
-addExcitement(sentence);
+addExcitement(sentence, "?");
