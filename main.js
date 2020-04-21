@@ -1,5 +1,5 @@
-// Add a new argument to the function so that a developer can specify which
-// character should be displayed instead of it always being an exclamation point.
+// Add a new argument to the function so that a developer can specify
+// how many times the special character should be added.
 
 let sentence = [
   "The",
@@ -18,11 +18,11 @@ let sentence = [
 
 let word_counter = 1;
 
-function addExcitement(theWordArray, punctuation) {
+function addExcitement(theWordArray, punctuation, reps) {
   let buildMeUp = "";
   for (let i = 0; i < theWordArray.length; i++) {
     if (word_counter % 3 === 0) {
-      buildMeUp += theWordArray[i] + punctuation + " ";
+      buildMeUp += theWordArray[i] + punctuation.repeat(reps) + " ";
       word_counter++;
     } else {
       buildMeUp += theWordArray[i] + " ";
@@ -32,4 +32,4 @@ function addExcitement(theWordArray, punctuation) {
   }
 }
 
-addExcitement(sentence, "?");
+addExcitement(sentence, "*", 4);
